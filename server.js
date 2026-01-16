@@ -10,8 +10,8 @@ const { Server } = require("socket.io");
 
 // –– Whitelist both frontends ––
 const allowedOrigins = [
-  process.env.FRONTEND_ORIGIN, // your old HTML dashboard origin
-  process.env.DASHBOARD_ORIGIN, // your React/Vercel app origin
+  'https://front-qrpe.onrender.com/',
+  'https://dashboard-3dx1.onrender.com/'
 ];
 
 // ─── 2) GLOBAL ERROR HANDLING ─────────────────────────────────────────────────
@@ -760,6 +760,7 @@ mongoose.connect('mongodb+srv://a:a@cluster0.ynqrnlv.mongodb.net/?appName=Cluste
     console.error("❌ MongoDB connection error:", err);
     process.exit(1);
   });
+
 
 
 
